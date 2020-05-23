@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVVM Sample App</string>
+    <string name="email">muhibgazi@gmail.com</string>
+    <string name="password_hint">password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+</resources>
