@@ -1,5 +1,6 @@
 package com.alien.mvvmsampleapp.data.repositories
 
+import android.util.Log
 import com.alien.mvvmsampleapp.data.db.AppDatabase
 import com.alien.mvvmsampleapp.data.db.entities.User
 import com.alien.mvvmsampleapp.data.networks.MyApi
@@ -14,5 +15,13 @@ class UserRepository(
     suspend fun userLogin(email: String, password: String): AuthResponse {
         return apiRequest {api.userLogin(email,password)}
     }
+
+    suspend fun userSignup(name: String, email: String, password: String): AuthResponse{
+        return apiRequest { api.userSignup(name,email,password) }
+    }
+
+    suspend fun saveUser(user: User) = db.getUserDao().upsert(user)
+
+    fun getUser() = db.getUserDao().getuser()
 
 }

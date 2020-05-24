@@ -6,9 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.alien.mvvmsampleapp.data.db.entities.User
 
-
-abstract class AppDatabase {
-    /*abstract fun getUserDao(): UserDao
+@Database(
+    entities = [User::class],
+    version = 1
+)
+abstract class AppDatabase: RoomDatabase() {
+    abstract fun getUserDao(): UserDao
 
     companion object {
         @Volatile
@@ -27,5 +30,5 @@ abstract class AppDatabase {
                 AppDatabase::class.java,
                 "MyDatabase.db"
             ).build()
-    }*/
+    }
 }
