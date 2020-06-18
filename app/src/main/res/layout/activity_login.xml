@@ -54,7 +54,7 @@
                     app:fontFamily="casual"
                     android:textStyle="bold"
                     android:textAllCaps="false"
-                    android:typeface="monospace" android:textColor="#969EEE"/>
+                    android:typeface="monospace" android:textColor="@color/colorAccent"/>
 
             </LinearLayout>
 
